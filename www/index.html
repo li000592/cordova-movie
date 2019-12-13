@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY``
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self' data: gap: https://api.themoviedb.org 'unsafe-eval';
+        connect-src 'self' https://api.themoviedb.org;
+        media-src *;   
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        script-src 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com;
+        img-src 'self' data: * ;
+        font-src 'self' data: *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Racing+Sans+One&display=swap" rel="stylesheet">
+        <title>The Movie Searcher</title>
+    </head>
+    <body>
+        <main>
+            <div id="home" class="page active">
+                <h1 id="search-logo">The Movie Searcher</h1>    
+                <div class="form">
+                        <input id="input" type="text" name="name" autocomplete="off" required/> 
+                        <label for="name" class="label-name">             
+                            <span class="content-name">Actor Name</span>
+                        </label>   
+                </div>
+                <button id="search" data-href="actors">GO !</button>          
+            </div>
+            <!-- ********************************************************** -->
+            <div id="actors" class="page">
+                <div class="header">
+                    <h2 class="actors-logo">The Movie Searcher</h2>
+                </div>
+                <div id="actorsNum"></div>
+                <div class="container">
+                    <div id="actorsList">
+
+                    </div>
+                </div>
+                <button class="fab" data-href="home">
+                    <img class="fab-logo"  data-href="home" src="./img/search.svg" alt="fab-button">
+                </button> 
+            </div>            
+            <!-- ********************************************************** -->
+            <div id="movies" class="page">
+                    <div class="header">
+                        <h2 id="actorName" class="movie-logo"></h2>
+                    </div>
+                    <div class="container">
+                            <div id="moviesList"></div>
+                    </div>
+                    <button class="fab" data-href="home">
+                        <img class="fab-logo" data-href="home" src="./img/search.svg" alt="fab-button">
+                    </button> 
+            </div>
+            <!-- ********************************************************** -->
+            <div id="movie" class="page">
+                <div class="header">
+                    <h2 id="movieName" class="movie-logo"></h2>
+                </div>
+                <div class="container">
+                    <div id="moviepage"></div>
+                </div>
+                <button class="fab" data-href="home">
+                    <img class="fab-logo" data-href="home" src="./img/search.svg" alt="fab-button">
+                </button> 
+            </div>
+        </main>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

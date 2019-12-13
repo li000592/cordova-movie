@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="algonquin.li000592.project2" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>li000592</name>
+    <description>
+        A movie's searcher.
+    </description>
+    <author email="li000592@algonquinlive.com" href="http://github.com/li000592/cordova-movie">
+        Haorong Li
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <icon density="mdpi" src="\res\icons\android\Icon-48.png" />
+    <icon density="hdpi" src="\res\icons\android\Icon-72.png" />
+    <icon density="xhdpi" src="\res\icons\android\Icon-96.png" />
+    <icon density="xxhdpi" src="\res\icons\android\Icon-144.png" />
+    <icon density="xxxhdpi" src="\res\icons\android\Icon-192.png" />
+    <splash density="land-mdpi" src="\res\screen\android\Landscape-mdpi.png" />
+    <splash density="port-mdpi" src="\res\screen\android\Portrait-mdpi.png" />
+    <splash density="land-hdpi" src="\res\screen\android\Landscape-hdpi.png" />
+    <splash density="port-hdpi" src="\res\screen\android\Portrait-hdpi.png" />
+    <splash density="land-xhdpi" src="\res\screen\android\Landscape-xhdpi.png" />
+    <splash density="port-xhdpi" src="\res\screen\android\Portrait-xhdpi.png" />
+    <splash density="land-xxhdpi" src="\res\screen\android\Landscape-xxhdpi.png" />
+    <splash density="port-xxhdpi" src="\res\screen\android\Portrait-xxhdpi.png" />
+    <splash density="land-xxxhdpi" src="\res\screen\android\Landscape-xxxhdpi.png" />
+    <splash density="port-xxxhdpi" src="\res\screen\android\Portrait-xxxhdpi.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="5000" />
+</widget>
